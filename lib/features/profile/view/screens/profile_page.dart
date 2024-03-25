@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:u_connect/core/constants/auth_status.dart';
 import 'package:u_connect/core/constants/constants.dart';
 import 'package:u_connect/core/route/route_utils.dart';
@@ -12,6 +13,7 @@ import 'package:u_connect/features/common/widgets/loading_widget.dart';
 import 'package:u_connect/features/profile/controller/bloc/profile_bloc.dart';
 import 'package:u_connect/features/profile/controller/repository/profile_repository_impl.dart';
 import 'package:u_connect/features/profile/view/widgets/about_section.dart';
+import 'package:u_connect/features/profile/view/widgets/profile_analytics_row.dart';
 import 'package:u_connect/features/profile/view/widgets/profile_image_section.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -46,14 +48,50 @@ class ProfileView extends StatelessWidget {
           );
         }
       },
-      child: BlocBuilder<ProfileBloc, ProfileState>(
+      child: BlocConsumer<ProfileBloc, ProfileState>(
+        listenWhen: (previous, current) =>
+            previous.galleryAccessStatus != current.galleryAccessStatus ||
+            previous.cameraPermissionFailureCount !=
+                current.cameraPermissionFailureCount ||
+            previous.cameraPermissionStatus != current.cameraPermissionStatus,
+        listener: (context, state) {
+          if (state.cameraPermissionFailureCount > 2) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                backgroundColor: AppColors.primaryColor,
+                content: TextSmallBold(
+                  text: AppLabels.cameraDeniedCountExceeded,
+                  color: AppColors.white,
+                ),
+              ),
+            );
+          } else if (state.cameraPermissionStatus == PermissionStatus.denied) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                backgroundColor: AppColors.primaryColor,
+                content: TextSmallBold(
+                  text: AppLabels.cameraPermissionDenied,
+                  color: AppColors.white,
+                ),
+              ),
+            );
+          } else if (state.galleryAccessStatus == PermissionStatus.denied) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                backgroundColor: AppColors.primaryColor,
+                content: TextSmallBold(
+                  text: AppLabels.galleryPermissionDenied,
+                  color: AppColors.white,
+                ),
+              ),
+            );
+          }
+        },
         builder: (context, state) {
           return state.userData.when(
             initialOrLoading: FullScreenLoader.new,
             failed: (message) => const ErrorPage(),
             success: (userData) {
-              final int followCount = userData.userFollowingList.length;
-              final int connectionCount = followCount > 500 ? 500 : followCount;
               return Column(
                 children: [
                   Expanded(
@@ -99,7 +137,7 @@ class ProfileView extends StatelessWidget {
                               ],
                             ),
                           ),
-                          const _ProfileInfoRow(),
+                          const ProfileAnalyticsDataRow(),
                           SizedBox(
                             height: 20.h,
                           ),
@@ -120,74 +158,6 @@ class ProfileView extends StatelessWidget {
   }
 }
 
-class _ProfileInfoRow extends StatelessWidget {
-  const _ProfileInfoRow({Key? key}) : super(key: key);
 
-  final List<ProfileInfoItem> _items = const [
-    ProfileInfoItem("Followers", 120),
-    ProfileInfoItem("Following", 200),
-  ];
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 80,
-      decoration: BoxDecoration(
-          color: AppColors.secondaryColor.withOpacity(0.5),
-          borderRadius: const BorderRadius.all(Radius.circular(6))),
-      constraints: const BoxConstraints(maxWidth: 400),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: _items
-            .map((item) => Expanded(
-                    child: Row(
-                  children: [
-                    if (_items.indexOf(item) != 0)
-                      VerticalDivider(
-                        color: AppColors.black.withOpacity(0.8),
-                        indent: 7.h,
-                        endIndent: 7.h,
-                      ),
-                    Expanded(child: ProfileAnalyticsCardItem(item: item)),
-                  ],
-                )))
-            .toList(),
-      ),
-    );
-  }
-}
 
-class ProfileAnalyticsCardItem extends StatelessWidget {
-  const ProfileAnalyticsCardItem({super.key, required this.item});
-
-  final ProfileInfoItem item;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            item.value.toString(),
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            ),
-          ),
-        ),
-        Text(
-          item.title,
-          style: Theme.of(context).textTheme.bodySmall,
-        )
-      ],
-    );
-  }
-}
-
-class ProfileInfoItem {
-  final String title;
-  final int value;
-  const ProfileInfoItem(this.title, this.value);
-}

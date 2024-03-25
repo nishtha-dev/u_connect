@@ -22,4 +22,8 @@ class AppLabels {
   static const addProfilePhoto = "Add profile photo";
   static const takePhoto = "Take a photo";
   static const uploadFromPhotos = "Upload from photos";
+  static const cameraPermissionDenied = "Camera Permission Denied";
+  static const galleryPermissionDenied = "Gallery Permission Denied";
+  static const cameraDeniedCountExceeded =
+      "Camera Permission Denied Count Exceeded";
 }
