@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "27297198317",
+    "project_id": "u-connect-934b5",
+    "storage_bucket": "u-connect-934b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:27297198317:android:a3e7a56c8f3ebb6acd1ce4",
+        "android_client_info": {
+          "package_name": "com.example.u_connect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrKyGKIScEZEmZsxGIQym-l90ulQklUmU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
