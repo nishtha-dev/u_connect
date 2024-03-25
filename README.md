@@ -32,7 +32,7 @@ Profile information should include at least a username, bio, and profile picture
 ##### 2) Install Dart.
 ##### 3) Clone this repo to desired location.
 ##### 4) Run Pub Get and Pub Upgrade.
-##### 5) Run this Project on your android emulator or connect real device to check this out.
+##### 5) Run this Project on your iOS emulator.
 
 ### Technology of Use 💻
 ####  Tools:-
