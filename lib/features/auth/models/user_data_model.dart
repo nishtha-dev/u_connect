@@ -1,5 +1,5 @@
-import 'package:json_annotation/json_annotation.dart';
 import 'package:u_connect/core/enums/dropdown_enums.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 part 'user_data_model.g.dart';
 
@@ -28,8 +28,7 @@ class UserDataModel {
   final List<String> userFollowersIdList;
   @JsonKey(name: 'following')
   final List<String> userFollowingList;
-  // final String city;
-  // final String country;
+  
 
   const UserDataModel(
       {this.avatar,

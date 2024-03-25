@@ -34,10 +34,6 @@ class ErrorPage extends StatelessWidget {
             SizedBox(
               height: 42.h,
             ),
-            // AppImage(
-            //   'assets/images/sip_error.png',
-            //   height: 252.h,
-            // ),
           ],
         ),
       ),

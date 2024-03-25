@@ -80,7 +80,6 @@ class _EditProfileBottomSheetState extends State<EditProfileBottomSheet> {
                               });
                             },
                             initialValue: widget.userData.description,
-                            // maxLine: 3,
                           ),
                         ),
                         EditFormFieldLayout(

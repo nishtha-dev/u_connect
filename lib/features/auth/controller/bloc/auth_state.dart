@@ -4,18 +4,15 @@ part of 'auth_bloc.dart';
 class AuthState extends Equatable {
   final AuthStatus authStatus;
   final String userName;
-  // final ApiStatus<bool> isUserCreatedSuccessFully;
 
   const AuthState({
     this.authStatus = AuthStatus.initial,
     this.userName = '',
-    // this.isUserCreatedSuccessFully = const Initial<bool>(),
   });
 
   AuthState copyWith({
     AuthStatus? authStatus,
     String? userName,
-    // ApiStatus<bool>? isUserCreatedSuccessFully
   }) {
     return AuthState(
       authStatus: authStatus ?? this.authStatus,

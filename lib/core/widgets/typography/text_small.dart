@@ -27,7 +27,6 @@ class TextSmall extends StatelessWidget {
         color: color ?? AppColors.black,
         fontSize: 14.sp,
       ).lineHeight(18.sp),
-      // overflow: overflow ?? TextOverflow.ellipsis,
       textAlign: textAlign ?? TextAlign.justify,
     );
   }

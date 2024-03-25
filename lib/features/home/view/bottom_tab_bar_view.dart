@@ -37,10 +37,6 @@ class _BottomTabBarViewState extends State<BottomTabBarView> {
       backgroundColor: AppColors.primaryColor,
       selectedItemColor: AppColors.secondaryColor,
       unselectedItemColor: AppColors.darkGrey.withOpacity(0.7),
-
-      //  selectedLabelStyle: ,
-
-      //     unselectedLabelStyle: context.fpTheme.medium.minusThree,
       onTap: (int currentIndex) {
         if (currentIndex == 3) {
           widget.onTap(currentIndex);

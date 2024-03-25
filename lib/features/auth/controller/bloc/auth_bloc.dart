@@ -68,14 +68,9 @@ class AuthBloc extends HydratedBloc<AuthEvent, AuthState> {
   }
 
   FutureOr<void> _createUser(CreateUser event, Emitter<AuthState> emit) async {
-    // emit(state.copyWith(isUserCreatedSuccessFully: const Loading<bool>()));
     try {
       await authRepo.createUserAccount(userName: event.userName);
-      // emit(
-      // state.copyWith(isUserCreatedSuccessFully: const Success(data: true)));
-    } on Exception {
-      // emit(state.copyWith(isUserCreatedSuccessFully: const Failed('false')));
-    }
+    } on Exception {}
   }
 
   @override

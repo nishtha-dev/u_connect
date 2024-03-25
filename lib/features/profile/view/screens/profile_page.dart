@@ -32,8 +32,6 @@ class ProfilePage extends StatelessWidget {
 }
 
 class ProfileView extends StatelessWidget {
-  // final UserDataModel userData;
-
   const ProfileView({
     super.key,
   });
@@ -78,7 +76,6 @@ class ProfileView extends StatelessWidget {
                                   text: userData.name,
                                   color: AppColors.black,
                                 ),
-                                // SizedBox(height: 2.h),
                                 TextMedium(
                                   text: (userData.selectedPronounName
                                               ?.isNotEmpty ??
@@ -127,7 +124,6 @@ class _ProfileInfoRow extends StatelessWidget {
   const _ProfileInfoRow({Key? key}) : super(key: key);
 
   final List<ProfileInfoItem> _items = const [
-    // ProfileInfoItem("Posts", 900),
     ProfileInfoItem("Followers", 120),
     ProfileInfoItem("Following", 200),
   ];

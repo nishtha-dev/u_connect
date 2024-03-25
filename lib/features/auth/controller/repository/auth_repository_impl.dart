@@ -34,11 +34,6 @@ class AuthRepositoryImpl extends AuthRepository {
         email: userData.email,
         password: userData.passWord,
       );
-      // await _fireStoreDB
-      //   .collection("users")
-      //   .doc(_auth.currentUser?.getIdToken())
-      //   .set();
-
       return AuthStatus.signUpSuccess;
     } on FirebaseAuthException catch (e) {
       return getAuthStatus(e);

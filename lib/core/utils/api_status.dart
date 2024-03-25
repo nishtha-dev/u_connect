@@ -1,10 +1,4 @@
-// part 'api_response.freezed.dart';
-// part 'api_response.g.dart';
-
-// @Freezed()
-sealed class ApiStatus<T>
-// with _$ApiStatus
-{
+sealed class ApiStatus<T> {
   const ApiStatus();
   const factory ApiStatus.initial() = Initial<T>;
   const factory ApiStatus.loading() = Loading<T>;
@@ -41,9 +35,6 @@ sealed class ApiStatus<T>
       Failed<T>(:final message) => failed?.call(message),
     };
   }
-
-  // factory ApiStatus.fromJson(Map<String, dynamic> json) =>
-  //     _$ApiStatusFromJson(json);
 }
 
 final class Initial<T> extends ApiStatus<T> {
