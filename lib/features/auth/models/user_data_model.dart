@@ -1,5 +1,5 @@
-import 'package:u_connect/core/enums/dropdown_enums.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:u_connect/core/enums/dropdown_enums.dart';
 
 part 'user_data_model.g.dart';
 
