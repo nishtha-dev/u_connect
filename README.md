@@ -13,12 +13,12 @@ This project displays  a social media platform build using flutter with a login/
   Implement Firebase Authentication to allow users to register and login using email/password or social media accounts.
   Ensure proper error handling for authentication processes..
    
- - Display a list or a summary of recent contributions towards the goal, including dates and amounts.
+Display a list or a summary of recent contributions towards the goal, including dates and amounts.
 
  - User Profile:-
   Users should be able to create and edit their profiles.
 Profile information should include at least a username, bio, and profile picture.
-  Display user profiles with relevant information..
+  Display user profiles with relevant information.
 
 
 ##### Duration : 2024.03.22 ~ 2024.03.26
