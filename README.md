@@ -33,7 +33,7 @@ Profile information should include at least a username, bio, and profile picture
 
 <img width="200" height="400" align='left' src="https://res.cloudinary.com/dvnfhm7q4/image/upload/v1711401963/Simulator_Screen_Shot_-_iPhone_14_Pro_Max_-_2024-03-26_at_02.49.38_gvnlbt.png">
 
-
+############ 
 
 ## Prerequisites
 Before following the steps to build and run this quickstart you will need:
