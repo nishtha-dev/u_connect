@@ -41,6 +41,8 @@ Profile information should include at least a username, bio, and profile picture
 #### Google Technologies:-
 1) Firebase
 2) Cloud Firestore
+3) Cloud Storage
+4) Firebase Authentication
 
 
 #### Languages:-
