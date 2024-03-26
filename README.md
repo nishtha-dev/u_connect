@@ -58,6 +58,8 @@ To use this project with Firebase, follow these steps:
 - Create a new project with the Firebase console
 - Enable Firebase Authentication, along with the Email/Password Authentication Sign-in provider in the Firebase Console (Authentication > Sign-in method > Email/Password > Edit > Enable > Save)
 - Enable Cloud Firestore
+ 
+- Enable Cloud Storage
 
 Then, follow one of the two approaches below. 👇
 
