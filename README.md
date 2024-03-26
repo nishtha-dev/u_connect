@@ -23,17 +23,6 @@ Profile information should include at least a username, bio, and profile picture
 
 ##### Duration : 2024.03.22 ~ 2024.03.26
 
-<img width="200" height="400" align='left' src="https://res.cloudinary.com/dvnfhm7q4/image/upload/v1711403319/landing_page_ewsbfn.png">
-
-<img width="200" height="400" align='left' src="https://res.cloudinary.com/dvnfhm7q4/image/upload/v1711403319/login_page_qxfgy4.png">
-
-<img width="200" height="400" align='left' src="https://res.cloudinary.com/dvnfhm7q4/image/upload/v1711403359/sign_up_page_vedc0c.png">
-
-<img width="200" height="400" align='left' src="https://res.cloudinary.com/dvnfhm7q4/image/upload/v1711403407/forgot_password_bv9ys6.png">
-
-<img width="200" height="400" align='left' src="https://res.cloudinary.com/dvnfhm7q4/image/upload/v1711401963/Simulator_Screen_Shot_-_iPhone_14_Pro_Max_-_2024-03-26_at_02.49.38_gvnlbt.png">
-
-#####
 
 ## Prerequisites
 Before following the steps to build and run this quickstart you will need:
@@ -101,3 +90,13 @@ For more information about the Firebase Emulator Suite visit the [Emulator Suite
 
 [firestore-docs]: https://firebase.google.com/docs/firestore/
 [emulator-docs]: https://firebase.google.com/docs/emulator-suite
+
+<img width="200" height="400" align='left' src="https://res.cloudinary.com/dvnfhm7q4/image/upload/v1711403319/landing_page_ewsbfn.png">
+
+<img width="200" height="400" align='left' src="https://res.cloudinary.com/dvnfhm7q4/image/upload/v1711403319/login_page_qxfgy4.png">
+
+<img width="200" height="400" align='left' src="https://res.cloudinary.com/dvnfhm7q4/image/upload/v1711403359/sign_up_page_vedc0c.png">
+
+<img width="200" height="400" align='left' src="https://res.cloudinary.com/dvnfhm7q4/image/upload/v1711403407/forgot_password_bv9ys6.png">
+
+<img width="200" height="400" align='left' src="https://res.cloudinary.com/dvnfhm7q4/image/upload/v1711401963/Simulator_Screen_Shot_-_iPhone_14_Pro_Max_-_2024-03-26_at_02.49.38_gvnlbt.png">
