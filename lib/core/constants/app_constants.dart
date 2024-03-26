@@ -22,6 +22,4 @@ class AppConstants {
   ];
 
   static const userCollectionName = "users";
-  static const defaultProfilePicUrl =
-      "https://firebasestorage.googleapis.com/v0/b/fir-auth-test-3c7c2.appspot.com/o/default_profile_avatar.svg?alt=media&token=ec541668-09ea-48b4-9854-3d9dc33a6d8e";
 }

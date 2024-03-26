@@ -60,7 +60,7 @@ class ImageSection extends StatelessWidget {
                           ? const ImageLoader()
                           : RenderProfileImage(
                               imageUrl: userData.avatar ??
-                                  AppConstants.defaultProfilePicUrl)),
+                                  AssetImages.defaultProfileAvatar)),
                   Positioned(
                     bottom: 0,
                     right: 0,
