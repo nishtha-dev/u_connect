@@ -25,6 +25,23 @@ Profile information should include at least a username, bio, and profile picture
 
 <!-- ***Demo:*** [Demo](https://res.cloudinary.com/dvnfhm7q4/video/upload/v1702879987/Recorder_18122023_112829_unu2x5.mp4) -->
 
+For more information about Firestore visit the [Firestore docs][firestore-docs].
+
+For more information about the Firebase Emulator Suite visit the [Emulator Suite docs][emulator-docs]
+
+[firestore-docs]: https://firebase.google.com/docs/firestore/
+[emulator-docs]: https://firebase.google.com/docs/emulator-suite
+
+## Prerequisites
+Before following the steps to build and run this quickstart you will need:
+ 1. [Node.Js](https://nodejs.org/en/download) Version 16.0 or higher
+ 2. [Java](https://jdk.java.net/) JDK version 11 or higher.
+
+## Configure and run the app locally with emulators:
+
+Follow the documentation to add firebase to your app: https://firebase.google.com/docs/flutter/setup?platform=ios
+
+
 
 
 ### Steps To Use Run This Project:
